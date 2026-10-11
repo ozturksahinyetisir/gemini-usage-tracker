@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemini Quota Bridge</title>
+    <style>
+        body {
+            width: 280px;
+            margin: 0;
+            padding: 14px;
+            background-color: #1A1C23;
+            color: #E8EAED;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #8AB4F8;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #81C995;
+            display: inline-block;
+            margin-right: 4px;
+        }
+        .status-dot.offline {
+            background-color: #EA4335;
+        }
+        .card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 12px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        .row:last-child {
+            margin-bottom: 0;
+        }
+        .label {
+            color: #9AA0A6;
+        }
+        .val {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+        button {
+            width: 100%;
+            background: #1A73E8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #185ABC;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">✨ Gemini Quota Bridge</div>
+        <div style="font-size: 11px;">
+            <span id="dot" class="status-dot"></span>
+            <span id="status-text">Bağlanıyor...</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="row">
+            <span class="label">5 Saatlik Limit:</span>
+            <span id="quota-val" class="val">-- %</span>
+        </div>
+        <div class="row">
+            <span class="label">Sıfırlanma Sayacı:</span>
+            <span id="timer-val" class="val">--:--:--</span>
+        </div>
+        <div class="row">
+            <span class="label">Plan:</span>
+            <span id="plan-val" class="val">Google AI Pro</span>
+        </div>
+    </div>
+
+    <button id="sync-btn">🔄 Şimdi Senkronize Et</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
