@@ -1,6 +1,13 @@
 # ✦ Gemini Usage & Quota Tracker (Windows Top Menu Bar)
 
+[![Release](https://img.shields.io/github/v/release/ozturksahinyetisir/gemini-usage-tracker?color=1A73E8)](https://github.com/ozturksahinyetisir/gemini-usage-tracker/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-blue.svg)]()
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)]()
+
 Windows için özel olarak tasarlanmış, **Google Gemini'nin 5 saatlik yuvarlanan kullanım kotasını (rolling compute limit)** ve sıfırlanma sayacını ekranın en üstünde modern bir **"Dynamic Island / Top Bar"** şeklinde sürekli ve canlı olarak gösteren masaüstü durum çubuğu uygulaması.
+
+> 📦 **Doğrudan İndirme:** Python kurmadan doğrudan çalıştırmak için [**GeminiUsageTracker.exe İndir (Son Sürüm)**](https://github.com/ozturksahinyetisir/gemini-usage-tracker/releases/latest/download/GeminiUsageTracker.exe)
 
 ---
 
