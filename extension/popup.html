@@ -5,7 +5,7 @@
     <title>Gemini Quota Bridge</title>
     <style>
         body {
-            width: 280px;
+            width: 300px;
             margin: 0;
             padding: 14px;
             background-color: #1A1C23;
@@ -59,7 +59,7 @@
             font-weight: 600;
             color: #FFFFFF;
         }
-        button {
+        button.primary {
             width: 100%;
             background: #1A73E8;
             color: white;
@@ -70,9 +70,49 @@
             font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
+            margin-bottom: 8px;
         }
-        button:hover {
+        button.primary:hover {
             background: #185ABC;
+        }
+        .manual-box {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed rgba(255,255,255,0.12);
+        }
+        .manual-box input {
+            width: 60px;
+            background: #242731;
+            border: 1px solid #3C4043;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .manual-box button {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            padding: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .manual-box button:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .msg {
+            font-size: 11px;
+            text-align: center;
+            color: #81C995;
+            margin-top: 4px;
+            min-height: 14px;
         }
     </style>
 </head>
@@ -87,7 +127,7 @@
 
     <div class="card">
         <div class="row">
-            <span class="label">5 Saatlik Limit:</span>
+            <span class="label">Masaüstü Çubuk:</span>
             <span id="quota-val" class="val">-- %</span>
         </div>
         <div class="row">
@@ -100,7 +140,14 @@
         </div>
     </div>
 
-    <button id="sync-btn">🔄 Şimdi Senkronize Et</button>
+    <button id="sync-btn" class="primary">🔄 Şimdi Tara ve Eşitle</button>
+
+    <div class="manual-box">
+        <span style="font-size: 11px; color: #9AA0A6;">Hızlı Ayar:</span>
+        <input type="number" id="quick-pct" min="0" max="100" placeholder="%">
+        <button id="set-btn">Masaüstüne Yaz</button>
+    </div>
+    <div id="msg" class="msg"></div>
 
     <script src="popup.js"></script>
 </body>

@@ -4,12 +4,22 @@
   "version": "1.0.0",
   "description": "Syncs Gemini 5-hour rolling usage and quota limits directly with your Windows Top Menu Bar in real time.",
   "permissions": [
-    "storage"
+    "storage",
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "https://gemini.google.com/*",
     "http://127.0.0.1:38281/*"
   ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "content_scripts": [
     {
       "matches": [
